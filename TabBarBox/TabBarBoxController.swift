@@ -14,7 +14,7 @@ open class TabBarBoxController: UIViewController {
     
     public var container = UIView()
     public var homeButton = HomeButton()
-
+    var viewControllers: [UIViewController] = []
     let backCircle = UIView()
     let inFrontCircle = UIView()
     var barView = UIView()
@@ -75,8 +75,8 @@ open class TabBarBoxController: UIViewController {
         container.translatesAutoresizingMaskIntoConstraints = false
         container.leftAnchor.constraint(equalTo: self.view.leftAnchor).isActive = true
         container.rightAnchor.constraint(equalTo: self.view.rightAnchor).isActive = true
-        container.topAnchor.constraint(equalTo: self.view.topAnchor).isActive = true
-        container.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: hieghtBar).isActive = true
+        container.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor).isActive = true
+        container.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: -hieghtBar).isActive = true
 
         // barView
         barView.translatesAutoresizingMaskIntoConstraints = false
@@ -139,5 +139,23 @@ open class TabBarBoxController: UIViewController {
     
     @objc func didTapHomeButton(_ sender: Any) {
         lisener?()
+    }
+    
+    open func selectedTab(at index: Int) {
+        for i in container.subviews {
+            i.removeFromSuperview()
+        }
+        guard let vcView = viewControllers[index].view else { return }
+        container.addSubview(vcView)
+        vcView.translatesAutoresizingMaskIntoConstraints = false
+        
+        vcView.leftAnchor.constraint(equalTo: self.container.leftAnchor).isActive = true
+        vcView.rightAnchor.constraint(equalTo: self.container.rightAnchor).isActive = true
+        vcView.topAnchor.constraint(equalTo: self.container.topAnchor).isActive = true
+        vcView.bottomAnchor.constraint(equalTo: self.container.bottomAnchor).isActive = true
+    }
+    
+    open func addViewControllers(viewController: UIViewController...) {
+        viewControllers.append(contentsOf: viewController)
     }
 }

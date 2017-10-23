@@ -75,7 +75,7 @@ open class TabBarBoxController: UIViewController {
         container.translatesAutoresizingMaskIntoConstraints = false
         container.leftAnchor.constraint(equalTo: self.view.leftAnchor).isActive = true
         container.rightAnchor.constraint(equalTo: self.view.rightAnchor).isActive = true
-        container.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor).isActive = true
+        container.topAnchor.constraint(equalTo: self.view.layoutMarginsGuide.topAnchor).isActive = true
         container.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: -hieghtBar).isActive = true
         
         // barView

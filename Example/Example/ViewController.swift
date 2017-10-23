@@ -16,23 +16,21 @@ class ViewController: TabBarBoxController {
         
         homeButton.setImage(UIImage(named: "add"), for: .normal)
         
-        let buttonCloud = UIButton(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
+        let buttonCloud = UIButton()
         buttonCloud.setImage(UIImage(named: "cloud"), for: .normal)
-        buttonCloud.setTitleColor(.blue, for: .highlighted)
         buttonCloud.addTarget(self, action: #selector(didTapButtonCloud(_:)), for: .touchUpInside)
-        addButton(buttonBar: buttonCloud)
         
-        let buttonFav = UIButton(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
+        let buttonFav = UIButton()
         buttonFav.setImage(UIImage(named: "fav"), for: .normal)
-        buttonFav.setTitleColor(.blue, for: .highlighted)
         buttonFav.addTarget(self, action: #selector(didTapButtonFav(_:)), for: .touchUpInside)
-        addButton(buttonBar: buttonFav)
+        
+        addButton(buttonBars: buttonCloud, buttonFav)
         
         let mainVC = storyboard?.instantiateViewController(withIdentifier: "MainViewController") as! MainViewController
         let second = storyboard?.instantiateViewController(withIdentifier: "SecondViewController") as! SecondViewController
 
         addViewControllers(viewController: mainVC, second)
-        
+        selectedTab(at: 0)
         
         addTargetHomeButton {
             print("hi")

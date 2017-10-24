@@ -41,20 +41,20 @@ you can add any actions to the button.
 for example :
 
 ```swift
-        buttonFav.addTarget(self, action: #selector(didTapButtonFav(_:)), for: .touchUpInside)
+buttonFav.addTarget(self, action: #selector(didTapButtonFav(_:)), for: .touchUpInside)
 ```
 
 ```swift
 
-    @objc func didTapButtonFav(_ sender: Any) {
-        selectedTab(at: 1)
-    }
+@objc func didTapButtonFav(_ sender: Any) {
+    selectedTab(at: 1)
+}
 ```
 
 
 for selected tab :
 
-  ```swift
-      selectedTab(at: 1)
+```swift
+ selectedTab(at: 1)
 ```
 

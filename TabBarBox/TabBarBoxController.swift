@@ -34,7 +34,7 @@ open class TabBarBoxController: UIViewController {
         
         // backCircle
         backCircle.layer.cornerRadius = widthCircleHome / 2
-        backCircle.layer.borderColor = UIColor.lightGray.cgColor
+        backCircle.layer.borderColor = UIColor.lightGray.withAlphaComponent(0.5).cgColor
         backCircle.layer.borderWidth = 1
         backCircle.backgroundColor = .white
         self.view.addSubview(backCircle)
@@ -42,7 +42,7 @@ open class TabBarBoxController: UIViewController {
         // BarView
         barView.backgroundColor = .white
         barView.layer.borderWidth = 1
-        barView.layer.borderColor = UIColor.lightGray.cgColor
+        barView.layer.borderColor = UIColor.lightGray.withAlphaComponent(0.5).cgColor
         view.addSubview(barView)
         
         // inFrontCircle
@@ -80,9 +80,9 @@ open class TabBarBoxController: UIViewController {
         
         // barView
         barView.translatesAutoresizingMaskIntoConstraints = false
-        barView.leftAnchor.constraint(equalTo: self.view.leftAnchor).isActive = true
-        barView.rightAnchor.constraint(equalTo: self.view.rightAnchor).isActive = true
-        barView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
+        barView.leftAnchor.constraint(equalTo: self.view.leftAnchor, constant: -1).isActive = true
+        barView.rightAnchor.constraint(equalTo: self.view.rightAnchor, constant: 1).isActive = true
+        barView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: -1).isActive = true
         barView.heightAnchor.constraint(equalToConstant: hieghtBar).isActive = true
         
         // back Circle
@@ -96,15 +96,15 @@ open class TabBarBoxController: UIViewController {
         inFrontCircle.translatesAutoresizingMaskIntoConstraints = false
         inFrontCircle.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
         inFrontCircle.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: -3).isActive = true
-        inFrontCircle.widthAnchor.constraint(equalToConstant: widthCircleHome).isActive = true
-        inFrontCircle.heightAnchor.constraint(equalToConstant: widthCircleHome).isActive = true
+        inFrontCircle.widthAnchor.constraint(equalToConstant: widthCircleHome - 1).isActive = true
+        inFrontCircle.heightAnchor.constraint(equalToConstant: widthCircleHome - 1).isActive = true
         
         // Home Button
         homeButton.translatesAutoresizingMaskIntoConstraints = false
         homeButton.centerXAnchor.constraint(equalTo: self.inFrontCircle.centerXAnchor).isActive = true
         homeButton.centerYAnchor.constraint(equalTo: self.inFrontCircle.centerYAnchor).isActive = true
-        homeButton.widthAnchor.constraint(equalToConstant: widthCircleHome - 4).isActive = true
-        homeButton.heightAnchor.constraint(equalToConstant: widthCircleHome - 4).isActive = true
+        homeButton.widthAnchor.constraint(equalToConstant: widthCircleHome - 8).isActive = true
+        homeButton.heightAnchor.constraint(equalToConstant: widthCircleHome - 8).isActive = true
         
         // Stack Left
         stackLeft.translatesAutoresizingMaskIntoConstraints = false
@@ -124,6 +124,7 @@ open class TabBarBoxController: UIViewController {
     
     open func addButton(buttonBars: UIButton...) {
         for buttonBar in buttonBars {
+            buttonBar.imageView?.contentMode = .scaleAspectFit
             if isLeft {
                 stackLeft.addArrangedSubview(buttonBar)
                 isLeft = false

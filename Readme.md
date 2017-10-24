@@ -5,6 +5,6 @@
 
 you can use in cocoapods
 ```swift
-pod 'PersianDatePicker'
+pod 'TabBarBox'
 ```
 

@@ -10,6 +10,7 @@ pod 'TabBarBox'
 ```
 
 
+
 # How to use
 
 first, you must import TabBarBox and your class inherit of TabBarBoxController
@@ -19,10 +20,18 @@ import TabBarBox
 ```
 
 ```swift
-class ViewController: TabBarBoxController {
+class CustomTabBarViewController: TabBarBoxController {
     ...
     
 ```
+
+then you selected TabBar and change class to 'CustomTabBarViewController'
+
+<img src="https://raw.githubusercontent.com/farhad1985/TabBarBox/master/Screenshot/include.png" />
+
+
+<img src="https://raw.githubusercontent.com/farhad1985/TabBarBox/master/Screenshot/tabbar.png" />
+
 
 
 action for homeButton

@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'TabBarBox'
-  s.version          = '0.1.4'
+  s.version          = '0.1.5'
   s.summary          = 'TabBarBox'
   s.homepage         = 'https://github.com/farhad1985/TabBarBox'
   s.author           = { 'Farhad Faramarzi' => 'farhad.public@gmail.com' }

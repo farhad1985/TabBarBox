@@ -9,23 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item-->
-        <scene sceneID="nd5-Cz-gg4">
-            <objects>
-                <viewController id="XKx-eN-N6V" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Oes-iu-nrf">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <viewLayoutGuide key="safeArea" id="v6S-a6-LgF"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="6EI-Hq-eup"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="uZ3-xU-ZV4" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="812" y="-913"/>
-        </scene>
-        <!--Item-->
+        <!--Cloud-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="Example" customModuleProvider="target" sceneMemberID="viewController">
@@ -35,14 +19,16 @@
                         <color key="backgroundColor" red="0.17496144769999999" green="0.40983229879999999" blue="0.79614913460000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="3po-iw-LNs"/>
+                    <tabBarItem key="tabBarItem" title="Cloud" image="cloud" id="3po-iw-LNs">
+                        <color key="badgeColor" red="0.17496144769999999" green="0.40983229879999999" blue="0.79614913460000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </tabBarItem>
                     <navigationItem key="navigationItem" id="g1o-0h-XyQ"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="788" y="-170"/>
         </scene>
-        <!--Item-->
+        <!--Favorite-->
         <scene sceneID="WHv-JD-pme">
             <objects>
                 <viewController id="IKT-xS-Yjl" sceneMemberID="viewController">
@@ -52,7 +38,9 @@
                         <color key="backgroundColor" red="0.27890214320000001" green="0.60662680859999996" blue="0.37652096149999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="hxc-ua-zGD"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="FD1-9T-4zg"/>
+                    <tabBarItem key="tabBarItem" title="Favorite" image="fav" id="FD1-9T-4zg">
+                        <color key="badgeColor" red="0.17496144769999999" green="0.40983229879999999" blue="0.79614913460000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bxk-m6-bIn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -77,7 +65,6 @@
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="xNq-wE-dle"/>
                         <segue destination="IKT-xS-Yjl" kind="relationship" relationship="viewControllers" id="rqY-Uk-shx"/>
-                        <segue destination="XKx-eN-N6V" kind="relationship" relationship="viewControllers" id="j0l-Je-8pO"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uKa-jG-eZE" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -87,5 +74,7 @@
     </scenes>
     <resources>
         <image name="add" width="24" height="24"/>
+        <image name="cloud" width="24" height="24"/>
+        <image name="fav" width="24" height="24"/>
     </resources>
 </document>

@@ -24,38 +24,25 @@ class ViewController: TabBarBoxController {
     
 ```
 
-for add button to TabBar :
+
+action for homeButton
 
 ```swift
-let fileButton = UIButton()
-fileButton.setImage(UIImage(named: "file"), for: .normal)
-        
-let ProfileButton = UIButton()
-ProfileButton.setImage(UIImage(named: "user"), for: .normal)
+import UIKit
+import TabBarBox
 
-// for add to TabBarBox
-addButton(buttonBars: fileButton, ProfileButton)
-```
+class CustomTabBarViewController: TabBarBoxController {
 
-you can add any actions to the button.
+    override func viewDidLoad() {
+        super.viewDidLoad()
 
-for example :
-
-```swift
-buttonFav.addTarget(self, action: #selector(didTapButtonFav(_:)), for: .touchUpInside)
-```
-
-```swift
-
-@objc func didTapButtonFav(_ sender: Any) {
-    selectedTab(at: 1)
+        homeButton.addTarget(self, action: #selector(didTapAction(_:)), for: .touchUpInside)
+    }
+    
+    func didTapAction(_ sender: Any) {
+        // do someThing
+    }
 }
-```
-
-
-for selected tab :
-
-```swift
- selectedTab(at: 1)
+    
 ```
 

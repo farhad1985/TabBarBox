@@ -4,12 +4,27 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Item-->
+        <scene sceneID="nd5-Cz-gg4">
+            <objects>
+                <viewController id="XKx-eN-N6V" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Oes-iu-nrf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="v6S-a6-LgF"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="6EI-Hq-eup"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uZ3-xU-ZV4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="812" y="-913"/>
+        </scene>
         <!--Item-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -49,12 +64,20 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="trX-vv-gBB" customClass="CustomTabBarViewController" customModule="Example" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="UmX-ve-Vi8">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="image" keyPath="imageHomeButton" value="add"/>
+                        <userDefinedRuntimeAttribute type="color" keyPath="colorHomeButton">
+                            <color key="value" red="0.17496144771575928" green="0.40983229875564575" blue="0.79614913463592529" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="xNq-wE-dle"/>
                         <segue destination="IKT-xS-Yjl" kind="relationship" relationship="viewControllers" id="rqY-Uk-shx"/>
+                        <segue destination="XKx-eN-N6V" kind="relationship" relationship="viewControllers" id="j0l-Je-8pO"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uKa-jG-eZE" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -62,4 +85,7 @@
             <point key="canvasLocation" x="-105" y="34"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="add" width="24" height="24"/>
+    </resources>
 </document>

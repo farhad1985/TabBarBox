@@ -8,6 +8,7 @@
 
 import UIKit
 
+@IBDesignable
 open class TabBarBoxController: UITabBarController {
     
     typealias Lisener = () -> Void
@@ -24,6 +25,20 @@ open class TabBarBoxController: UITabBarController {
     var backgroundColorHomeButton = UIColor()
     private var isLeft = true
     private var lisener: Lisener?
+    
+    @IBInspectable
+    var imageHomeButton: UIImage? = nil  {
+        didSet {
+            homeButton.setImage(imageHomeButton, for: .normal)
+        }
+    }
+    
+    @IBInspectable
+    var colorHomeButton: UIColor = .blue {
+        didSet {
+            homeButton.backgroundHomeButton = colorHomeButton
+        }
+    }
     
     override open func viewDidLoad() {
         super.viewDidLoad()
@@ -44,9 +59,7 @@ open class TabBarBoxController: UITabBarController {
 
         // HomeButton
         homeButton.layer.cornerRadius = (widthCircleHome - 8) / 2
-        homeButton.backgroundColor = .blue
         tabBar.addSubview(homeButton)
-        homeButton.backgroundHomeButton = UIColor(red: 43/255, green: 107/255, blue: 213/255, alpha: 1.0)
     }
     
     override open func viewDidLayoutSubviews() {

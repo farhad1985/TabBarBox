@@ -14,6 +14,11 @@ class CustomTabBarViewController: TabBarBoxController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        homeButton.addTarget(self, action: #selector(didTapAction(_:)), for: .touchUpInside)
+    }
+    
+    func didTapAction(_ sender: Any) {
+        // do someThing
     }
 
 }

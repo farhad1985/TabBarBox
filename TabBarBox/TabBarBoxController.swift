@@ -30,6 +30,7 @@ open class TabBarBoxController: UITabBarController {
     var imageHomeButton: UIImage? = nil  {
         didSet {
             homeButton.setImage(imageHomeButton, for: .normal)
+            homeButton.imageView?.layer.cornerRadius =  widthCircleHome / 2
         }
     }
     

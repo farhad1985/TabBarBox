@@ -57,7 +57,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="image" keyPath="imageHomeButton" value="add"/>
+                        <userDefinedRuntimeAttribute type="image" keyPath="imageHomeButton" value="Screen Shot 2017-11-04 at 9.58.39 AM"/>
                         <userDefinedRuntimeAttribute type="color" keyPath="colorHomeButton">
                             <color key="value" red="0.17496144771575928" green="0.40983229875564575" blue="0.79614913463592529" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         </userDefinedRuntimeAttribute>
@@ -73,7 +73,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="add" width="24" height="24"/>
+        <image name="Screen Shot 2017-11-04 at 9.58.39 AM" width="52" height="55"/>
         <image name="cloud" width="24" height="24"/>
         <image name="fav" width="24" height="24"/>
     </resources>
